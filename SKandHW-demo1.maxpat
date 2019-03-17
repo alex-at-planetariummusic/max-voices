@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 637.0, 154.0, 1344.0, 938.0 ],
+		"rect" : [ 396.0, 168.0, 1736.0, 938.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,13 +38,198 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 310.0, 13.0, 60.0, 22.0 ],
+					"style" : "",
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"bubbleside" : 3,
+					"id" : "obj-47",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 253.0, 64.5, 55.0, 24.0 ],
+					"style" : "",
+					"text" : "near"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"id" : "obj-45",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 499.0, 64.5, 47.0, 24.0 ],
+					"style" : "",
+					"text" : "far"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"bubbleside" : 0,
+					"id" : "obj-43",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 348.0, 88.0, 150.0, 52.0 ],
+					"style" : "",
+					"text" : "Drag to simulate\nsensor input"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"bubbleside" : 0,
+					"id" : "obj-41",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 42.0, 103.5, 150.0, 52.0 ],
+					"style" : "",
+					"text" : "drop sound file here to test"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"bubbleside" : 2,
+					"id" : "obj-38",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 13.5, 346.0, 150.0, 52.0 ],
+					"style" : "",
+					"text" : "Use these to switch between processors"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-34",
+					"linecount" : 6,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 10.0, 701.0, 676.0, 87.0 ],
+					"style" : "",
+					"text" : "Notes: \n1) Most of these are not quite right because they're all just in one way or another crossfading between the distorted and non-distorted states -- there's not enough \"fusion\" between the states to make it sound like there's one thing that's changing,\nand I think that's the effect we want. (I think \"robospeak\" has the most fusion.) Granular synthesis should provide one way of  creating that \"fusion.\"\n2) We could play with using more than one processing box. "
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-31",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 42.0, 632.0, 359.0, 20.0 ],
+					"style" : "",
+					"text" : "xmod1_piatched: as above, with different arguments"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-22",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 981.0, 380.0, 139.0, 22.0 ],
+					"style" : "",
+					"text" : "xmod1_pitched 100 400"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-20",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 42.0, 605.0, 739.0, 20.0 ],
+					"style" : "",
+					"text" : "xmod1_pitched: random pitch (depends on xmod1-fft subpatch). Arguments are $1: base pitch(hz), $2: random range (hz above base)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 832.0, 380.0, 139.0, 22.0 ],
+					"style" : "",
+					"text" : "xmod1_pitched 200 400"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 42.0, 575.0, 309.0, 20.0 ],
+					"style" : "",
+					"text" : "comb tuned to 330 (5th above 220)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 42.0, 545.0, 330.0, 20.0 ],
+					"style" : "",
+					"text" : "comb: tuned comb filter. Argument is filter hz"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 743.0, 380.0, 63.0, 22.0 ],
+					"style" : "",
+					"text" : "comb 330"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-39",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 42.0, 564.0, 150.0, 20.0 ],
+					"patching_rect" : [ 38.0, 518.0, 356.0, 20.0 ],
 					"style" : "",
-					"text" : "xmod1: Scary whisper"
+					"text" : "xmod1: Scary whisper (depends on xmod1-fft subpatch)"
 				}
 
 			}
@@ -54,7 +239,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 38.0, 536.0, 363.0, 20.0 ],
+					"patching_rect" : [ 38.0, 491.0, 363.0, 20.0 ],
 					"style" : "",
 					"text" : "filtnoise1: envelope-following filered noise (not that interesting)"
 				}
@@ -63,11 +248,11 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-35",
-					"linecount" : 7,
+					"linecount" : 6,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 23.0, 774.0, 367.0, 100.0 ],
+					"patching_rect" : [ 1070.0, 723.0, 367.0, 87.0 ],
 					"style" : "",
 					"text" : "TODO: \n1) Granular effects that creates a stuttering effect\n2) Granular effect that makes the input sound like a crowd\n3) Granular effect that shifts the pitch around (maybe make it slide around a bit) but keeps the content hearable\n3) Make xmod1 less scary sounding\n"
 				}
@@ -75,14 +260,15 @@
 			}
 , 			{
 				"box" : 				{
+					"bubble" : 1,
 					"id" : "obj-32",
-					"linecount" : 5,
+					"linecount" : 8,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 957.0, 425.0, 263.0, 74.0 ],
+					"patching_rect" : [ 1122.0, 332.0, 372.0, 118.0 ],
 					"style" : "",
-					"text" : "These are the audio processing boxes. They all have the same input/output interfaces. Each one lives in a file that you should be able to copy to your project folder and include in your patches."
+					"text" : "These are the audio processing boxes. They all have the same input/output interfaces: The first input is the audio, and the second is the control signal, with 0 representing the state where someone is close to the sensor, and 99 represents nobody being near the sensor. \n\nEach processor lives in a file that you should be able to copy to your project folder and include in your patches."
 				}
 
 			}
@@ -106,7 +292,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1015.0, 302.0, 63.0, 22.0 ],
+					"patching_rect" : [ 1101.0, 265.0, 63.0, 22.0 ],
 					"style" : "",
 					"text" : "r sensorin"
 				}
@@ -118,7 +304,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 390.5, 196.5, 65.0, 22.0 ],
+					"patching_rect" : [ 310.0, 149.5, 65.0, 22.0 ],
 					"style" : "",
 					"text" : "s sensorin"
 				}
@@ -131,7 +317,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 178.0, 302.0, 57.0, 22.0 ],
+					"patching_rect" : [ 339.0, 265.0, 57.0, 22.0 ],
 					"style" : "",
 					"text" : "r audioin"
 				}
@@ -156,7 +342,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 373.0, 425.0, 113.0, 22.0 ],
+					"patching_rect" : [ 339.0, 380.0, 113.0, 22.0 ],
 					"style" : "",
 					"text" : "robofilt1 2000 2000",
 					"varname" : "robofilt1"
@@ -169,7 +355,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 38.0, 478.0, 150.0, 20.0 ],
+					"patching_rect" : [ 38.0, 433.0, 150.0, 20.0 ],
 					"style" : "",
 					"text" : "Unmodified pass-through"
 				}
@@ -181,7 +367,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 38.0, 504.0, 410.0, 20.0 ],
+					"patching_rect" : [ 38.0, 459.0, 410.0, 20.0 ],
 					"style" : "",
 					"text" : "robofilt: Modulation effect that makes the voice sound like a sci-fi robot"
 				}
@@ -193,22 +379,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 38.0, 446.5, 150.0, 20.0 ],
+					"patching_rect" : [ 38.0, 401.5, 150.0, 20.0 ],
 					"style" : "",
 					"text" : "OFF"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-16",
-					"linecount" : 4,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 407.0, 128.0, 393.0, 60.0 ],
-					"style" : "",
-					"text" : "Sensor input.\nvalues: 0.0--99.0\n0 is the \"close\" setting: It lets the sound through unmodified\n99 is the \"far\" setting"
 				}
 
 			}
@@ -225,7 +398,7 @@
 			}
 , 			{
 				"box" : 				{
-					"disabled" : [ 0, 0, 0, 0, 0 ],
+					"disabled" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
 					"flagmode" : 1,
 					"id" : "obj-13",
 					"itemtype" : 0,
@@ -235,10 +408,10 @@
 					"offset" : 29,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 13.5, 446.5, 19.0, 147.0 ],
-					"size" : 5,
+					"patching_rect" : [ 13.5, 401.5, 19.0, 263.0 ],
+					"size" : 9,
 					"style" : "",
-					"value" : 4
+					"value" : 8
 				}
 
 			}
@@ -246,12 +419,12 @@
 				"box" : 				{
 					"id" : "obj-11",
 					"maxclass" : "newobj",
-					"numinlets" : 6,
+					"numinlets" : 9,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 724.0, 648.0, 71.5, 22.0 ],
+					"patching_rect" : [ 984.0, 685.0, 103.0, 22.0 ],
 					"style" : "",
-					"text" : "selector~ 5"
+					"text" : "selector~ 8"
 				}
 
 			}
@@ -262,7 +435,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 718.0, 425.0, 45.0, 22.0 ],
+					"patching_rect" : [ 613.0, 380.0, 45.0, 22.0 ],
 					"style" : "",
 					"text" : "xmod1",
 					"varname" : "xmod1"
@@ -276,9 +449,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 769.0, 425.0, 165.0, 22.0 ],
+					"patching_rect" : [ 664.0, 380.0, 63.0, 22.0 ],
 					"style" : "",
-					"text" : "filtnoise1combed 400 200 0.6"
+					"text" : "comb 220"
 				}
 
 			}
@@ -289,7 +462,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 576.0, 425.0, 130.0, 22.0 ],
+					"patching_rect" : [ 471.0, 380.0, 130.0, 22.0 ],
 					"style" : "",
 					"text" : "filtnoise1 400 -200. 0.5"
 				}
@@ -304,7 +477,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 310.0, 196.5, 50.0, 22.0 ],
+					"patching_rect" : [ 255.5, 103.5, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -317,7 +490,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 310.0, 9.5, 187.0, 20.0 ],
+					"patching_rect" : [ 310.0, 64.5, 187.0, 20.0 ],
 					"size" : 100.0,
 					"style" : ""
 				}
@@ -329,7 +502,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 724.0, 695.5, 45.0, 45.0 ],
+					"patching_rect" : [ 984.0, 737.5, 45.0, 45.0 ],
 					"style" : ""
 				}
 
@@ -343,21 +516,21 @@
 								"filekind" : "audiofile",
 								"loop" : 1,
 								"content_state" : 								{
-									"formantcorrection" : [ 0 ],
-									"speed" : [ 1.0 ],
-									"slurtime" : [ 0.0 ],
-									"originallengthms" : [ 0.0 ],
-									"originallength" : [ 0.0, "ticks" ],
 									"play" : [ 0 ],
-									"basictuning" : [ 440 ],
-									"originaltempo" : [ 120.0 ],
-									"followglobaltempo" : [ 0 ],
-									"pitchcorrection" : [ 0 ],
-									"quality" : [ "basic" ],
+									"slurtime" : [ 0.0 ],
 									"pitchshift" : [ 1.0 ],
+									"originaltempo" : [ 120.0 ],
+									"speed" : [ 1.0 ],
+									"quality" : [ "basic" ],
+									"formantcorrection" : [ 0 ],
+									"timestretch" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"basictuning" : [ 440 ],
+									"originallengthms" : [ 0.0 ],
 									"mode" : [ "basic" ],
+									"pitchcorrection" : [ 0 ],
 									"formant" : [ 1.0 ],
-									"timestretch" : [ 0 ]
+									"followglobaltempo" : [ 0 ]
 								}
 
 							}
@@ -423,8 +596,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-11", 7 ],
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-11", 4 ],
 					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 8 ],
+					"source" : [ "obj-22", 0 ]
 				}
 
 			}
@@ -438,7 +625,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"order" : 3,
+					"order" : 6,
 					"source" : [ "obj-26", 0 ]
 				}
 
@@ -446,7 +633,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 1 ],
-					"order" : 1,
+					"order" : 0,
+					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"order" : 2,
 					"source" : [ "obj-26", 0 ]
 				}
 
@@ -454,7 +649,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"order" : 2,
+					"order" : 5,
+					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"order" : 1,
 					"source" : [ "obj-26", 0 ]
 				}
 
@@ -462,7 +665,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-24", 0 ],
-					"order" : 4,
+					"order" : 7,
+					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"order" : 3,
 					"source" : [ "obj-26", 0 ]
 				}
 
@@ -470,7 +681,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"order" : 0,
+					"order" : 4,
 					"source" : [ "obj-26", 0 ]
 				}
 
@@ -478,14 +689,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 1 ],
-					"order" : 2,
+					"order" : 5,
 					"source" : [ "obj-28", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 1 ],
+					"destination" : [ "obj-17", 1 ],
 					"order" : 1,
 					"source" : [ "obj-28", 0 ]
 				}
@@ -493,8 +704,32 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 1 ],
+					"order" : 4,
+					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 1 ],
+					"order" : 0,
+					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-24", 1 ],
-					"order" : 3,
+					"order" : 6,
+					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 1 ],
+					"order" : 2,
 					"source" : [ "obj-28", 0 ]
 				}
 
@@ -502,8 +737,22 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 1 ],
-					"order" : 0,
+					"order" : 3,
 					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 6 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
@@ -523,12 +772,12 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-2::obj-9::obj-68" : [ "CV3", "CV3", 0 ],
-			"obj-2::obj-9::obj-55" : [ "power", "power", 0 ],
 			"obj-2::obj-9::obj-2" : [ "Freq", "Freq", 0 ],
-			"obj-2::obj-9::obj-80" : [ "FreqMode", "FreqMode", 0 ],
-			"obj-2::obj-9::obj-102" : [ "CV1", "CV1", 0 ],
 			"obj-2::obj-9::obj-7" : [ "Offset", "Offset", 0 ],
+			"obj-2::obj-9::obj-68" : [ "CV3", "CV3", 0 ],
+			"obj-2::obj-9::obj-102" : [ "CV1", "CV1", 0 ],
+			"obj-2::obj-9::obj-80" : [ "FreqMode", "FreqMode", 0 ],
+			"obj-2::obj-9::obj-55" : [ "power", "power", 0 ],
 			"obj-2::obj-9::obj-103" : [ "CV2", "CV2", 0 ],
 			"obj-2::obj-9::obj-11" : [ "Res", "Res", 0 ]
 		}
@@ -548,7 +797,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "filtnoise1combed.maxpat",
+				"name" : "comb.maxpat",
 				"bootpath" : "~/Documents/macstudio/2019/SKandHW",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -576,6 +825,13 @@
 			}
 , 			{
 				"name" : "robofilt1.maxpat",
+				"bootpath" : "~/Documents/macstudio/2019/SKandHW",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "xmod1_pitched.maxpat",
 				"bootpath" : "~/Documents/macstudio/2019/SKandHW",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
